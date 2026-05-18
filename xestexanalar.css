@@ -1,0 +1,162 @@
+/* Ümumi tənzimləmələr */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Banner Dizaynı */
+.banner {
+    background: linear-gradient(135deg, #42b883 0%, #1a73e8 100%);
+    color: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.banner h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.banner p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Grid sistemi - Kartları yan-yana düzmək üçün */
+.hospital-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+/* Kartın Əsas Konstruksiyası */
+.card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eef2f5;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Kartın Şəkli */
+.card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Şəklin korlanmadan qutuya oturması üçün */
+}
+
+/* Kartın Daxili Kontenti */
+.card-content {
+    padding: 20px;
+}
+
+.hospital-name {
+    font-size: 1.3rem;
+    color: #1a202c;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+/* Reytinq Bölməsi */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.text-yellow {
+    color: #ffc107;
+}
+
+.reviews {
+    color: #718096;
+    font-weight: normal;
+}
+
+/* İnformasiya Siyahısı (Ünvan, Tel, Saat) */
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+
+.info-item i {
+    color: #3182ce; /* İkonların göy rəngi */
+    width: 16px;
+    text-align: center;
+}
+
+/* Alt tərəfdəki statistika qutuları (Şöbə və Həkim) */
+.card-stats {
+    display: flex;
+    gap: 15px;
+}
+
+.stat-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Şəkillərdəki spesifik bənövşəyi və yaşıl fonlar */
+.stat-box.purple {
+    background-color: #f3f0ff;
+}
+.stat-box.purple .stat-number {
+    color: #6b46c1;
+}
+
+.stat-box.green {
+    background-color: #f0fff4;
+}
+.stat-box.green .stat-number {
+    color: #38a169;
+}
+
+.stat-number {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #718096;
+    margin-top: 2px;
+}
